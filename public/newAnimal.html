@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./src/frontend/validateAnimalForm.js"></script>
+    <title>Registro de Animal</title>
+</head>
+<body>
+    <form action="/api/v1/animals" method="POST" id="animalForm">
+        <p>
+            <label for="animalname-field">Nombre del animal: </label>
+            <input type="text" name="animalname" id="animalname-field" required>
+        </p>
+        <p>
+            <label for="breed-field">Raza: </label>
+            <input type="text" name="breed" id="breed-field" required>
+        </p>
+        <p>
+            <label for="weight-field">Peso (kg):</label>
+            <input type="number" name="weight" id="weight-field" step="0.1">
+        </p>
+        <p>
+            <label for="gender-field">Género:</label>
+            <select name="gender" id="gender-field" required>
+                <option value="">Seleccione género</option>
+                <option value="M">Macho</option>
+                <option value="H">Hembra</option>
+            </select>
+        </p>
+        <p>
+            <label for="ownername-field">Nombre del dueño:</label>
+            <input type="text" name="ownername" id="ownername-field" required>
+        </p>
+        <p>
+            <input type="submit" value="Registrar Animal">
+        </p>
+    </form>
+</body>
+</html> 
